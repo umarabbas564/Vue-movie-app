@@ -4,7 +4,6 @@
 </template>
 
 <script>
-import "sweetalert2/dist/sweetalert2.min.css";
 export default {
   created() {
     const user = JSON.parse(localStorage.getItem("isLoggedIn"));
