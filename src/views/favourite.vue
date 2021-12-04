@@ -2,10 +2,15 @@
   <Navbar></Navbar>
 
   <div class="container">
-    <div class="alert alert-info" v-if="this.$store.getters.auth.isLogin && this.$store.getters.getFavouriteList.length > 0">
+    <div
+      class="alert alert-info"
+      v-if="
+        this.$store.getters.auth.isLogin &&
+        this.$store.getters.getFavouriteList.length > 0
+      "
+    >
       My Favourite Movies
     </div>
-    <!-- <h1 class="text-center">My Favourite Movies</h1> -->
     <div class="row" v-if="favourites.length > 0">
       <div
         class="col-md-4 mt-4"

@@ -1,24 +1,20 @@
-# test_app
+# proud pada
 
-## Project setup
-```
-npm install
-```
+## commands
+    - start server
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+    npm run server
 
-### Compiles and minifies for production
-```
-npm run build
-```
+    - create build
 
-### Lints and fixes files
-```
-npm run lint
-```
+    npm run build
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### folder structure
+
+    . src 
+    . src > store (vuex)
+    . src > views
+    . src > router
+    . src > components (shared components)
+    . src > assets (static assets)
+    . dist (build folder)

@@ -16,6 +16,7 @@
                 id="lst"
                 v-if="this.$store.getters.auth.isLogin"
                 @click="add(index, list)"
+                :class="list.isActive ? 'fav' : ''"
                 ><a href="javascript:void(0)"><i class="bi bi-heart"></i></a
               ></span>
             </h5>
@@ -47,11 +48,14 @@ export default {
   },
   methods: {
     add(index, list) {
-      //   let newList = [...this.moviesList];
-      //  let newObj = {};
-      //  Object.assign(newObj, list);
+      let newList = [...this.moviesList];
+      newList.map((item) => {
+        if (item.id === list.id) {
+          item["isActive"] = true;
+        }
+      });
       this.$store.dispatch("favourite", list);
-      // this.$store.dispatch("setMovies", list);
+      this.$store.commit("setMovies", { data: newList });
     },
     detail(index, list) {
       this.$store.dispatch("Detail", list);
@@ -67,6 +71,11 @@ export default {
 <style scoped lang="scss">
 #lst {
   float: right;
+  &.fav {
+    .bi-heart {
+      color: orangered;
+    }
+  }
 }
 a.card-link {
   bottom: 15px;

@@ -49,11 +49,9 @@ export default {
           this.$router.push("/");
         }
       }
-      // this.$router.push('../components/List');
     },
   },
   created() {
-    // console.log(this.$store.getters.auth)
     this.$store.commit("logout");
   },
 };

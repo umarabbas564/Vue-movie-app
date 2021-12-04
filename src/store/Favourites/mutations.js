@@ -1,9 +1,5 @@
 export default {
   setFavouriteList(state, payload) {
-    // state.favouritesList[payload.id] = payload;
-    // let getList=localStorage.getItem('favList')
-    // getList.push(payload)
-    // debugger
     const data = {
       id: payload.id,
       poster_path: payload.poster_path,
@@ -24,8 +20,8 @@ export default {
   },
   removeItem(state, payload) {
     let localArr = JSON.parse(localStorage.getItem("favList")) || [];
-    localArr = localArr.filter(item=> item.id !== payload.id)
+    localArr = localArr.filter((item) => item.id !== payload.id);
     state.favouritesList = localArr;
-    localStorage.setItem("favList", JSON.stringify(localArr))
+    localStorage.setItem("favList", JSON.stringify(localArr));
   },
 };
