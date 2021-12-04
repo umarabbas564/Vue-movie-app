@@ -28,15 +28,17 @@
               {{ list.title }}
             </h5>
             <p class="card-text">{{ list.overview }}</p>
-            <a href="#" class="card-link btn btn-secondary">Detail</a>
-            <span
-              ><a
-                href="javascript:void(0)"
-                @click="removeItem(index, list)"
-                class="card-link"
-                id="rmv"
-                ><i class="bi bi-trash"></i></a
-            ></span>
+            <div class="buttons-wrapper">
+              <a href="#" class="card-link btn btn-dark">Detail</a>
+              <span
+                ><a
+                  href="javascript:void(0)"
+                  @click="removeItem(index, list)"
+                  class="card-link"
+                  id="rmv"
+                  ><i class="bi bi-trash"></i></a
+              ></span>
+            </div>
           </div>
         </div>
       </div>
@@ -100,6 +102,17 @@ div.card {
         right: 15px;
         top: 15px;
         line-height: 1.2;
+      }
+    }
+    .buttons-wrapper {
+      position: absolute;
+      width: calc(100% - 30px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      bottom: 0;
+      .card-link.btn-dark {
+        min-width: 100px;
       }
     }
   }

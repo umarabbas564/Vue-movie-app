@@ -29,14 +29,14 @@
           v-if="this.$store.getters.auth.isLogin"
         >
           <li class="nav-item ms-auto mb-2 mb-lg-0" style="float: right">
-            <router-link class="nav-link" to="" type="submit" @click="logout()"
+            <router-link class="login_btn" to="" type="submit" @click="logout()"
               >Logout</router-link
             >
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else>
           <li class="nav-item ms-auto mb-2 mb-lg-0" style="float: right">
-            <a class="nav-link" href="/login" type="submit">Login</a>
+            <a class="login_btn" href="/login" type="submit">Login</a>
           </li>
         </ul>
       </div>
@@ -55,3 +55,13 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.login_btn {
+  background: #212529;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 4px 20px;
+  text-decoration: none;
+  border: 2px solid #9a9d9e;
+}
+</style>

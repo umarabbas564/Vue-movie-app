@@ -23,7 +23,7 @@
             <p class="card-text">{{ list.overview.substr(0, 100) }}</p>
             <router-link
               to="/detail"
-              class="card-link btn btn-secondary"
+              class="card-link btn btn-dark"
               @click="detail(index, list)"
               >Detail</router-link
             >

@@ -96,12 +96,12 @@ form {
     }
     .btn_submit {
       display: block;
-      margin: 15px auto;
+      margin: 15px auto 0;
       padding: 5px 30px;
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      background: #238b08;
+      background: #212529;
       color: #ffffff;
       font-weight: 500;
       border: none;
