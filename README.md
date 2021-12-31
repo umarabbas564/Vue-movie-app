@@ -1,4 +1,4 @@
-# Proud Panda
+# Vue-movie-app
 
 ## commands
 - install node modules
